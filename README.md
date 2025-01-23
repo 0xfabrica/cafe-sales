@@ -1,49 +1,50 @@
-# Dirty Cafe Sales Analysis Project
+```markdown
+# Proyecto de Análisis de Ventas de Dirty Cafe
 
-This repository contains a comprehensive Data Science project aimed at cleaning, analyzing, and modeling a dirty dataset simulating cafe sales. The dataset is intentionally messy, with missing values, inconsistencies, and errors, providing a realistic scenario for data cleaning and machine learning.
+Este repositorio contiene un proyecto completo de Ciencia de Datos cuyo objetivo es limpiar, analizar y modelar un conjunto de datos sucio que simula las ventas de un café. El conjunto de datos está intencionadamente desordenado, con valores faltantes, inconsistencias y errores, lo que ofrece un escenario realista para la limpieza de datos y el aprendizaje automático.
 
 ---
 
-## 📂 Project Structure
+## 📂 Estructura del Proyecto
 
 ```
 ├── data/
-│   └── dirty_cafe_sales.csv    # Dataset used in the project
+│   └── dirty_cafe_sales.csv    # Conjunto de datos utilizado en el proyecto
 ├── notebooks/
-│   └── cafesales.ipynb         # Original exploratory notebook
+│   └── cafesales.ipynb         # Cuaderno original de exploración de datos
 ├── src/
-│   ├── cafesales_functions.py  # Reusable functions for data processing
-│   └── main.py                 # Streamlit app for deployment
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project documentation
+│   ├── cafesales_functions.py  # Funciones reutilizables para el procesamiento de datos
+│   └── main.py                 # Aplicación Streamlit para implementación
+├── requirements.txt            # Dependencias de Python
+└── README.md                   # Documentación del proyecto
 ```
 
 ---
 
-## 📝 Project Overview
+## 📝 Descripción General del Proyecto
 
-The **Dirty Cafe Sales** dataset contains 10,000 rows of synthetic sales transactions. It includes challenges such as:
-- **Missing values**: Columns like `Item`, `Quantity`, `Price Per Unit`, and `Transaction Date` contain `NaN`, `ERROR`, or `UNKNOWN`.
-- **Inconsistent data**: Errors in numeric and categorical columns.
-- **Real-world issues**: Requires feature engineering and data cleaning.
+El conjunto de datos **Dirty Cafe Sales** contiene 10,000 filas de transacciones de ventas sintéticas. Incluye desafíos como:
+- **Valores faltantes**: Columnas como `Item`, `Quantity`, `Price Per Unit` y `Transaction Date` contienen `NaN`, `ERROR` o `UNKNOWN`.
+- **Datos inconsistentes**: Errores en columnas numéricas y categóricas.
+- **Problemas del mundo real**: Requiere ingeniería de características y limpieza de datos.
 
-### Key Objectives
-1. Perform data cleaning and wrangling to make the dataset usable.
-2. Conduct exploratory data analysis (EDA) to uncover trends and insights.
-3. Train and evaluate machine learning models to predict `Total Spent`.
+### Objetivos Clave
+1. Realizar limpieza de datos y transformación para hacer que el conjunto de datos sea utilizable.
+2. Realizar un análisis exploratorio de datos (EDA) para descubrir tendencias e información relevante.
+3. Entrenar y evaluar modelos de aprendizaje automático para predecir `Total Spent`.
 
 ---
 
-## 📊 Analysis and Results
+## 📊 Análisis y Resultados
 
-### Data Cleaning
-- Missing and invalid values (`ERROR`, `UNKNOWN`) were replaced with `NaN`.
-- KNN imputation was used for numeric columns, and categorical columns were filled with the mode.
-- `Transaction Date` was converted to `datetime`, and new features (`Year`, `Month`, `Day`, `DayOfWeek`) were created.
+### Limpieza de Datos
+- Los valores faltantes y los valores inválidos (`ERROR`, `UNKNOWN`) fueron reemplazados por `NaN`.
+- Se utilizó imputación por KNN para las columnas numéricas, y las columnas categóricas se rellenaron con la moda.
+- `Transaction Date` fue convertida a `datetime`, y se crearon nuevas características (`Year`, `Month`, `Day`, `DayOfWeek`).
 
-### Machine Learning Models
-Three models were evaluated to predict `Total Spent`:
-1. **Linear Regression**:
+### Modelos de Aprendizaje Automático
+Se evaluaron tres modelos para predecir `Total Spent`:
+1. **Regresión Lineal**:
    - MSE: 3.3176099
    - R²: 0.9055234
 2. **K-Nearest Neighbors (KNN)**:
@@ -53,92 +54,89 @@ Three models were evaluated to predict `Total Spent`:
    - MSE: 0.267172
    - R²: 0.992391
 
-**Conclusion**: XGBoost outperformed the other models and is recommended for future predictions.
+**Conclusión**: XGBoost superó a los otros modelos y se recomienda para futuras predicciones.
 
 ---
 
-## 📈 Key Insights
-1. The most popular products were **Coffee** and **Sandwich**.
-2. There is a strong linear relationship between `Quantity` and `Total Spent`.
-3. Cleaned data allowed for a more accurate prediction of transaction totals.
+## 📈 Principales Insights
+1. Los productos más populares fueron **Café** y **Sándwich**.
+2. Existe una fuerte relación lineal entre `Quantity` y `Total Spent`.
+3. Los datos limpiados permitieron una predicción más precisa de los totales de las transacciones.
 
 ---
 
-## 🚀 How to Run
+## 🚀 Cómo Ejecutar el Proyecto
 
-### Prerequisites
-1. Install Python 3.8+.
-2. Clone the repository:
+### Requisitos Previos
+1. Instalar Python 3.8 o superior.
+2. Clonar el repositorio:
    ```bash
    git clone https://github.com/your-username/dirty-cafe-sales.git
    cd dirty-cafe-sales
    ```
-3. Install dependencies:
+3. Instalar las dependencias:
    ```bash
    pip install -r requirements.txt
    ```
 
-### Running the Streamlit App
-To launch the interactive app:
+### Ejecutando la Aplicación Streamlit
+Para lanzar la aplicación interactiva:
 ```bash
 streamlit run src/main.py
 ```
 
 ---
 
-## 📂 Dataset Description
+## 📂 Descripción del Conjunto de Datos
 
-| Column Name       | Description                                           | Example Values      |
-|--------------------|-------------------------------------------------------|---------------------|
-| `Transaction ID`   | Unique identifier for each transaction                | `TXN_1234567`       |
-| `Item`            | Item purchased (may contain missing/invalid values)   | `Coffee`, `ERROR`   |
-| `Quantity`        | Quantity of the item purchased                        | `1`, `3`, `UNKNOWN` |
-| `Price Per Unit`  | Price of a single item                                | `2.00`, `4.00`      |
-| `Total Spent`     | Total amount spent (`Quantity` × `Price Per Unit`)    | `8.00`, `12.00`     |
-| `Payment Method`  | Payment method used                                   | `Cash`, `UNKNOWN`   |
-| `Location`        | Transaction location                                  | `In-store`, `ERROR` |
-| `Transaction Date`| Date of the transaction                               | `2023-01-01`        |
-
----
-
-## 🌟 Features
-
-- **Data Cleaning**: Handles missing values, invalid entries, and inconsistent data formats.
-- **Exploratory Analysis**: Identifies patterns, trends, and insights.
-- **Machine Learning Models**: Predicts `Total Spent` using Linear Regression, KNN, and XGBoost.
-- **Streamlit Deployment**: Interactive web application for real-time analysis and predictions.
+| Nombre de la Columna   | Descripción                                               | Ejemplos de Valores   |
+|------------------------|-----------------------------------------------------------|-----------------------|
+| `Transaction ID`        | Identificador único de cada transacción                   | `TXN_1234567`         |
+| `Item`                  | Artículo comprado (puede contener valores faltantes/inválidos) | `Café`, `ERROR`       |
+| `Quantity`              | Cantidad del artículo comprado                            | `1`, `3`, `UNKNOWN`   |
+| `Price Per Unit`        | Precio de un solo artículo                                | `2.00`, `4.00`        |
+| `Total Spent`           | Monto total gastado (`Quantity` × `Price Per Unit`)       | `8.00`, `12.00`       |
+| `Payment Method`        | Método de pago utilizado                                  | `Efectivo`, `UNKNOWN` |
+| `Location`              | Ubicación de la transacción                               | `En tienda`, `ERROR`  |
+| `Transaction Date`      | Fecha de la transacción                                   | `2023-01-01`          |
 
 ---
 
-## 🛠️ Technologies Used
+## 🌟 Características
 
-- **Python**: Core programming language.
-- **Pandas**: Data manipulation and cleaning.
-- **Seaborn & Matplotlib**: Data visualization.
-- **Scikit-learn**: Machine learning models and evaluation.
-- **XGBoost**: Advanced predictive modeling.
-- **Streamlit**: Deployment of the interactive app.
+- **Limpieza de Datos**: Maneja valores faltantes, entradas inválidas e inconsistencias en los formatos de datos.
+- **Análisis Exploratorio**: Identifica patrones, tendencias e información relevante.
+- **Modelos de Aprendizaje Automático**: Predice `Total Spent` utilizando Regresión Lineal, KNN y XGBoost.
+- **Implementación con Streamlit**: Aplicación web interactiva para análisis y predicciones en tiempo real.
 
 ---
 
-## 🤝 Contribution
+## 🛠️ Tecnologías Utilizadas
 
-Contributions are welcome! Feel free to fork this repository, create a new branch, and submit a pull request.
+- **Python**: Lenguaje de programación principal.
+- **Pandas**: Manipulación y limpieza de datos.
+- **Seaborn & Matplotlib**: Visualización de datos.
+- **Scikit-learn**: Modelos de aprendizaje automático y evaluación.
+- **XGBoost**: Modelado predictivo avanzado.
+- **Streamlit**: Implementación de la aplicación interactiva.
 
 ---
 
-## 📄 License
+## 🤝 Contribución
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+¡Las contribuciones son bienvenidas! Siéntete libre de bifurcar este repositorio, crear una nueva rama y enviar un pull request.
 
 ---
 
-## 📬 Contact
+## 📄 Licencia
 
-For any questions or suggestions, please reach out:
-- Email: your-email@example.com
-- GitHub: [your-username](https://github.com/your-username)
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+---
+
+## 📬 Contacto
+
+Para cualquier pregunta o sugerencia, por favor contacta:
+- Correo electrónico: izanfabrica2022@gmail.com
+- GitHub: 0xfabrica (https://github.com/0xfabrica)
 ```
-
-### ¿Qué más necesitas?
-Este archivo `README.md` tiene toda la información clave para cualquier usuario de GitHub que quiera entender y usar tu proyecto. Si deseas personalizar algo (e.g., agregar tu correo, enlace de GitHub o imágenes), avísame. 🚀
