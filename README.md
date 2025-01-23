@@ -1,6 +1,3 @@
-Aquí tienes un ejemplo de un archivo `README.md` para tu proyecto en GitHub:  
-
-```markdown
 # Dirty Cafe Sales Analysis Project
 
 This repository contains a comprehensive Data Science project aimed at cleaning, analyzing, and modeling a dirty dataset simulating cafe sales. The dataset is intentionally messy, with missing values, inconsistencies, and errors, providing a realistic scenario for data cleaning and machine learning.
