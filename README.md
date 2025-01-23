@@ -13,7 +13,7 @@ Este repositorio contiene un proyecto completo de Ciencia de Datos cuyo objetivo
 │   └── cafesales.ipynb         # Cuaderno original de exploración de datos
 ├── src/
 │   ├── cafesales_functions.py  # Funciones reutilizables para el procesamiento de datos
-│   └── main.py                 # Aplicación Streamlit para implementación
+│   └── main.py                 # Script principal del proyecto
 ├── requirements.txt            # Dependencias de Python
 └── README.md                   # Documentación del proyecto
 ```
@@ -78,10 +78,11 @@ Se evaluaron tres modelos para predecir `Total Spent`:
    pip install -r requirements.txt
    ```
 
-### Ejecutando la Aplicación Streamlit
-Para lanzar la aplicación interactiva:
+### Ejecutando el Proyecto
+Para ejecutar el análisis y el modelado de datos, abre y ejecuta el archivo Jupyter Notebook `notebooks/cafesales.ipynb`:
+
 ```bash
-streamlit run src/main.py
+jupyter notebook notebooks/cafesales.ipynb
 ```
 
 ---
@@ -106,7 +107,6 @@ streamlit run src/main.py
 - **Limpieza de Datos**: Maneja valores faltantes, entradas inválidas e inconsistencias en los formatos de datos.
 - **Análisis Exploratorio**: Identifica patrones, tendencias e información relevante.
 - **Modelos de Aprendizaje Automático**: Predice `Total Spent` utilizando Regresión Lineal, KNN y XGBoost.
-- **Implementación con Streamlit**: Aplicación web interactiva para análisis y predicciones en tiempo real.
 
 ---
 
@@ -117,7 +117,7 @@ streamlit run src/main.py
 - **Seaborn & Matplotlib**: Visualización de datos.
 - **Scikit-learn**: Modelos de aprendizaje automático y evaluación.
 - **XGBoost**: Modelado predictivo avanzado.
-- **Streamlit**: Implementación de la aplicación interactiva.
+- **Jupyter Notebook**: Plataforma para el análisis interactivo de datos.
 
 ---
 
