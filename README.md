@@ -10,8 +10,6 @@ Este repositorio contiene un proyecto completo de Ciencia de Datos cuyo objetivo
 ├── data/
 │   └── dirty_cafe_sales.csv    # Conjunto de datos utilizado en el proyecto
 ├── src/
-│   ├── cafesales_functions.py  # Funciones reutilizables para el procesamiento de datos
-│   └── main.py                 # Script principal del proyecto
 │   └── cafesales.ipynb         # Cuaderno original de exploración de datos
 │   ├──requirements.txt            # Dependencias de Python
 └──    README.md                   # Documentación del proyecto
