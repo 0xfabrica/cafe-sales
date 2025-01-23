@@ -52,6 +52,9 @@ Se evaluaron tres modelos para predecir `Total Spent`:
 
 **Conclusión**: XGBoost superó a los otros modelos y se recomienda para futuras predicciones.
 
+![image](https://github.com/user-attachments/assets/95ed3aca-c2af-42fe-b5be-6c85ab274e58)
+
+
 ---
 
 ## 📈 Principales Insights
