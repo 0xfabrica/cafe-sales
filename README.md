@@ -1,6 +1,6 @@
 # Proyecto de Análisis de Ventas de Dirty Cafe
 
-Este repositorio contiene un proyecto completo de Ciencia de Datos cuyo objetivo es limpiar, analizar y modelar un conjunto de datos sucio que simula las ventas de un café. El conjunto de datos está intencionadamente desordenado, con valores faltantes, inconsistencias y errores, lo que ofrece un escenario realista para la limpieza de datos y el aprendizaje automático.
+Este repositorio contiene un proyecto completo de Ciencia de Datos cuyo objetivo es limpiar, analizar y modelar un conjunto de datos sucio que simula las ventas de un establecimiento de cafés y desayunos. El conjunto de datos está intencionadamente desordenado, con valores faltantes, inconsistencias y errores, lo que ofrece un escenario realista para la limpieza de datos y el aprendizaje automático.
 
 ---
 
